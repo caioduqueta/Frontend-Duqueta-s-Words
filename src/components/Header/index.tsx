@@ -10,11 +10,11 @@ import {Container} from "./styles"
 import { useState } from "react";
 
 export function Header(){
+
   
 const [isProfileClicked, setisProfileClicked] = useState(false)
 
 function handleOnClickProfile(){
-
 setisProfileClicked(!isProfileClicked)
 }
 

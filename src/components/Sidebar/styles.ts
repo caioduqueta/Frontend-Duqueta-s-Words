@@ -1,6 +1,8 @@
+import { NumberOne } from "phosphor-react";
 import styled from "styled-components";
 
-export const Hamburguer = styled.div`
+export const Hamburguer = styled.button`
+background: transparent;
 width: 3rem;
 padding: 0.5rem 0 0.5rem 1rem;
 
@@ -15,13 +17,15 @@ transition: all 0.2s;
 }
 `
 
+
+
 export const Container = styled.nav`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 
 width: 25rem;
-height: calc(100vh - 8rem);
+height: calc(100vh - 130px);
 background: var(--header);
 box-shadow: 4px 0 3px var(--sidebar-hover);
 font-family:'Readex Pro', sans-serif;
@@ -49,30 +53,3 @@ a{
 }
 }
 `
-
-/*ul{
-  width: 25rem;
-  list-style: none;
-  font-family:'Readex Pro', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: var(--white);
-li{
-  padding: 0.75rem 0 0.6rem 1rem;
-  background: var(--header);
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-& li:hover{
-  background: var(--background);
-}
-
-div.dev{
-  margin-top: 10rem;
-}
-
-}
-
-`
-*/

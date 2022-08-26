@@ -1,18 +1,33 @@
 import { Container, Hamburguer } from "./styles"
 import { NavLink } from "react-router-dom"
+import { useState } from "react"
 
 import { List } from "phosphor-react"
 
+// interface SidebarProps{
+//  onOpenAndCloseSidebar: ()=> void
+// }
+//onOpenAndCloseSidebar}: SidebarProps
+
 export function Sidebar(){
+  const [isHamburgerClicked, setIsHamburgerClicked] = useState(false)
+
+function handleOpenAndCloseSidebar(){
+setIsHamburgerClicked(!isHamburgerClicked);
+ console.log(isHamburgerClicked);
+}
   return( 
   <>
-    <Hamburguer>
+    <Hamburguer 
+    type="button"
+    onClick={handleOpenAndCloseSidebar}
+    >
       <div className="list">
       <List size={32} weight="regular" />
       </div>
       </Hamburguer>
 
-    <Container> 
+    {isHamburgerClicked && <Container> 
     <NavLink to="/admin/wordcounter">
       Word counter
     </NavLink>
@@ -22,8 +37,8 @@ export function Sidebar(){
     <NavLink to="/admin/yourwords">
     Your Words
     </NavLink>
-    </Container>
+    </Container>}
     </>
-
+  
   )
 }
