@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.form`
 margin-top: 4rem;
 width: 37.5rem;
 height: 21.875rem;
@@ -66,7 +66,7 @@ input{
   }
 }
 `
-export const CheckBoxForm = styled.form`
+export const CheckBoxDiv = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;

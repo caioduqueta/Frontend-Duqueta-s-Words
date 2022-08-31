@@ -1,8 +1,19 @@
 import {Container, Content} from "./styles"
+import Modal from "react-modal"
 
-export function UserLanguage(){
+
+interface UserLanguageProps{
+  modalLanguageOpenAndClose: boolean;
+  onRequestClose: () => void;
+}
+
+export function UserLanguage({modalLanguageOpenAndClose, onRequestClose}:UserLanguageProps){
   return(
-    <Container>
+    <Modal isOpen={modalLanguageOpenAndClose}
+    onRequestClose={onRequestClose}
+    overlayClassName="react-modal-overlay"
+    className="react-modal-content">
+    <Container onClick={onRequestClose}>
       <span className="user-language">Languages</span>
       <Content>
         <button 
@@ -25,5 +36,6 @@ export function UserLanguage(){
           </button>
           </Content>
     </Container>
+    </Modal>
   )
 }

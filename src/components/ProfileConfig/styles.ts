@@ -84,3 +84,6 @@ span{
 
 }
 `
+// export const ButtonModal = styled.div`
+//  display:none;
+//  `

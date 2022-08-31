@@ -1,11 +1,12 @@
+
 import { Container, Times, BoxButtons, Boxes } from "./styles"
 import { GameButton } from "../../components/GameButton"
 import { MainBox } from "../../components/MainBox"
 import { ResultBox } from "../../components/ResultBox" 
 
 
-export function WordCounter(){
 
+export function WordCounter(){
 
   return(
     <Container>

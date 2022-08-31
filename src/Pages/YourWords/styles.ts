@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+height: calc(100vh - 75px);
+padding-top: 6rem;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: flex-start;
+
 `
 export const Titles = styled.div`
 display: flex;
@@ -13,7 +16,7 @@ justify-content: center;
 margin-bottom: 0.5rem;
 
 div{
-  height: 6.25rem;
+  height: 1rem;
   width: 100%;
   max-width: 62.5rem;
 
@@ -24,7 +27,6 @@ grid-template-columns: 27rem 27rem 1fr;}
 
   span{
     margin-left: 9rem;
-    margin-top: 5rem;
     color: var(--text-grey);
     font-family: "Roboto" ,sans-serif;
     font-size: 1rem;

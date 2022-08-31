@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.form`
-margin-top: 8rem;
+height: calc(100vh - 75px);
+padding-top: 8rem;
 
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 
 

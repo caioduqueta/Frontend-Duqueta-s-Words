@@ -28,13 +28,13 @@ setIsHamburgerClicked(!isHamburgerClicked);
       </Hamburguer>
 
     {isHamburgerClicked && <Container> 
-    <NavLink to="/admin/wordcounter">
+    <NavLink to="/wordcounter">
       Word counter
     </NavLink>
-    <NavLink to="/admin/whichwordisit">
+    <NavLink to="/whichwordisit">
     Which Word is it?
     </NavLink>
-    <NavLink to="/admin/yourwords">
+    <NavLink to="/yourwords">
     Your Words
     </NavLink>
     </Container>}

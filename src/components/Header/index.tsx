@@ -1,3 +1,5 @@
+import { useState, useContext } from "react";
+import { ModalsContext } from "../../Context/ModalContext";
 
 import {UserCircle} from "phosphor-react"
 import logoImg from '../../assets/logo-duqueta.svg'
@@ -7,15 +9,14 @@ import { UserLanguage } from "../UserLanguage";
 import { NavLink } from "react-router-dom";
 
 import {Container} from "./styles"
-import { useState } from "react";
+
 
 export function Header(){
 
-  
-const [isProfileClicked, setisProfileClicked] = useState(false)
+const {isProfileModalClicked, OpenAndCloseProfileModal, CloseProfileModal} = useContext(ModalsContext);
 
-function handleOnClickProfile(){
-setisProfileClicked(!isProfileClicked)
+function handleOpenAndCloseProfileModal(){
+OpenAndCloseProfileModal(!isProfileModalClicked)
 }
 
 
@@ -35,14 +36,15 @@ setisProfileClicked(!isProfileClicked)
       <button
        type="button"
        className="profile"
-        onClick={handleOnClickProfile}
+        onClick={handleOpenAndCloseProfileModal}
         >
       <UserCircle size={45} weight="thin" />
       </button>
       </div>
     </Container>
-    {isProfileClicked && <ProfileConfig/>} {/*se estiver true abre*/}
+   <ProfileConfig modalOpenAndClose = {isProfileModalClicked}
+   onRequestClose = {handleOpenAndCloseProfileModal}
+   />
     </>
-
   )
 }
